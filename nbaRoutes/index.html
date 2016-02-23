@@ -14,13 +14,27 @@
             <ul>
                 <li><a ui-sref="home"> Home </a></li>
                 <li><a ui-sref="teams({team: 'utahjazz'})"> Utah Jazz </a></li>
+                <!--ui-sref: A directive that binds a link (<a> tag) to a state.   -->
+ <!-- If the state has an associated URL, the directive will automatically
+ generate & update the href attribute via the $state.href() method -->
                 <li><a ui-sref="teams({team: 'losangeleslakers'})"> Los Angeles Lakers </a></li>
+                <!-- Clicking the link will trigger a state transition with optional parameters.  -->
                 <li><a ui-sref="teams({team: 'miamiheat'})"> Miami Heat </a></li>
             </ul>
         </div>
 
         <!--the views get injected in the following element:-->
         <div ui-view></div>
+
+        <img src="images/jazz-logo.png" class="shtuff-top"/>
+        <img src="images/lakers-logo.png" class="shtuff-top"/>
+        <img src="images/heat-logo.png" class="shtuff-top"/>
+
+<!-- The ui-view directive tells $state where to place your templates. -->
+        <!--views for each team on the home page. see lines 14-42 on app.js --> 
+        <div ui-view="utahjazz" class="third"></div>
+        <div ui-view="losangeleslakers" class="third"></div>
+        <div ui-view="miamiheat" class="third"></div>
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>

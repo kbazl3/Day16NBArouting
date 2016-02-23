@@ -105,6 +105,20 @@ html, body {
   width: 100%;
 }
 
+.third {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    margin: auto;
+}
+
+.shtuff-top {
+  width: 30%;
+  display: inline-block;
+  float: left;
+  margin: auto;
+}
+
 .btn {
   background: rgba(0, 0, 0, 0.77);
   color: white;
